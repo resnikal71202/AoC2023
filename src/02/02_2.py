@@ -15,8 +15,7 @@ with open(input) as f:
         min_blue = 0
         for set in game_data.split(';'):
             for color_count in set.split(','):
-                count = color_count.split()[0]
-                color = color_count.split()[1]
+                count, color = color_count.split()
                 if (color == 'red' and int(count) > min_red):
                     min_red = int(count)
                 if (color == 'green' and int(count) > min_green):

@@ -24,8 +24,7 @@ with open(input) as f:
         break_flag = False
         for set in game_data.split(';'):
             for color_count in set.split(','):
-                count = color_count.split()[0]
-                color = color_count.split()[1]
+                count, color = color_count.split()
                 if (break_condition(color, int(count))):
                     break_flag = True
                     break
